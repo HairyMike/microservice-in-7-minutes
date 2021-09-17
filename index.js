@@ -4,7 +4,7 @@ const finale = require('finale-rest'),
       http = require('http');
 
 // Setup database
-const database = new Sequelize('users', 'guest', 'guest', {
+const database = new Sequelize('musicians', 'guest', 'guest', {
     host: process.env.DB_HOST || 'localhost',
     dialect: 'postgres'
 });
@@ -38,7 +38,7 @@ const musiciansResource = finale.resource({
 
     const steve = await Musicians.create({
         name: 'Steve Harris',
-        instrucment: 'Bass'
+        instrument: 'Bass'
     });
     console.log(steve.toJSON());
 

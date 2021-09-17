@@ -36,8 +36,8 @@ npm start # or use vscode debugging tools
 
 Controller | Endpoint | Description
 -----------|----------|------------
-userResource.create | POST /users | Create a user
-userResource.list | GET /users  | Get a listing of users
-userResource.read | GET /users/:id | Get details about a user
-userResource.update | PUT /users/:id | Update a user
-userResource.delete | DELETE /users/:id | Delete a user
+musicianResource.create | POST /musicians | Create a musician
+musicianResource.list | GET /musicians  | Get a listing of musicians
+musicianResource.read | GET /musicians/:id | Get details about a musician
+musicianResource.update | PUT /musicians/:id | Update a musician
+musicianResource.delete | DELETE /musicians/:id | Delete a musician
