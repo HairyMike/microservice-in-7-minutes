@@ -1,7 +1,7 @@
 version: '3'
 services:
   microservice:
-    image: "microservice"
+    build: .
     environment:
       DB_HOST: database
     ports:

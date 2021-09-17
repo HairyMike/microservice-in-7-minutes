@@ -23,7 +23,6 @@ https://github.com/tommybananas/finale
 ## Getting started
 
 ```
-docker build . -t microservice
 docker-compose up
 ```
 Server runs on http://localhost:8080

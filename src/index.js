@@ -9,11 +9,11 @@ const database = new Sequelize('users', 'guest', 'guest', {
     dialect: 'postgres'
 });
 
-class User extends Model {}
-User.init({
-    username: DataTypes.STRING,
-    birthday: DataTypes.DATE
-}, { sequelize: database, modelName: 'user' });
+class Musicians extends Model {}
+Musicians.init({
+    name: DataTypes.STRING,
+    instrument: DataTypes.STRING
+}, { sequelize: database, modelName: 'musicians' });
 
 // Configure a web server
 const app = express();
@@ -28,17 +28,17 @@ finale.initialize({
 });
 
 // Create REST resource
-const userResource = finale.resource({
-    model: User,
-    endpoints: ['/users', '/users/:id']
+const musiciansResource = finale.resource({
+    model: Musicians,
+    endpoints: ['/musicians', '/musicians/:id']
 });
 
 (async () => {
     await database.sync({ force: true })
 
-    const steve = await User.create({
-        username: 'steve.harris',
-        birthday: new Date(1950, 6, 20)
+    const steve = await Musicians.create({
+        name: 'Steve Harris',
+        instrucment: 'Bass'
     });
     console.log(steve.toJSON());
 
