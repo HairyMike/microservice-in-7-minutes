@@ -28,7 +28,7 @@ finale.initialize({
 });
 
 // Create REST resource
-finale.resource({
+const userResource = finale.resource({
     model: User,
     endpoints: ['/users', '/users/:id']
 });
