@@ -23,11 +23,17 @@ https://github.com/tommybananas/finale
 ## Getting started
 
 ```
-# build docker image
 docker build . -t microservice
 docker-compose up
 ```
 Server runs on http://localhost:8080
+
+If you want to run locally, you can do this:
+```
+docker-compose stop microservice
+npm install
+npm start # or use vscode debugging tools
+```
 
 Controller | Endpoint | Description
 -----------|----------|------------
