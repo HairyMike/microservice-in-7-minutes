@@ -19,12 +19,6 @@ userResource.read | GET /users/:id | Get details about a user
 userResource.update | PUT /users/:id | Update a user
 userResource.delete | DELETE /users/:id | Delete a user
 
-userResource.create	POST /users	Create a user
-userResource.list	GET /users	Get a listing of users
-userResource.read	GET /users/:id	Get details about a user
-userResource.update	PUT /users/:id	Update a user
-userResource.delete	DELETE /users/:id	Delete a user
-
 ## Components
 
 ### Sequelize
