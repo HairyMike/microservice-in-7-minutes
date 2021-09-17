@@ -2,23 +2,6 @@
 By combining a few special nodejs libraries, its possible to build out
 a fully functioning API featuring all CRUD operations for your data.
 
-## Getting started
-
-```
-# build docker image
-docker build . -t microservice
-docker-compose up
-```
-Server runs on http://localhost:8080
-
-Controller | Endpoint | Description
------------|----------|------------
-userResource.create | POST /users | Create a user
-userResource.list | GET /users  | Get a listing of users
-userResource.read | GET /users/:id | Get details about a user
-userResource.update | PUT /users/:id | Update a user
-userResource.delete | DELETE /users/:id | Delete a user
-
 ## Components
 
 ### Sequelize
@@ -36,3 +19,20 @@ https://expressjs.com/
 Creates REST endpoints and controllers for Sequelize models
 
 https://github.com/tommybananas/finale
+
+## Getting started
+
+```
+# build docker image
+docker build . -t microservice
+docker-compose up
+```
+Server runs on http://localhost:8080
+
+Controller | Endpoint | Description
+-----------|----------|------------
+userResource.create | POST /users | Create a user
+userResource.list | GET /users  | Get a listing of users
+userResource.read | GET /users/:id | Get details about a user
+userResource.update | PUT /users/:id | Update a user
+userResource.delete | DELETE /users/:id | Delete a user
