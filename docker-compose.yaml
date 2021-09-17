@@ -1,0 +1,22 @@
+version: '3'
+services:
+  microservice:
+    image: "microservice"
+    environment:
+      DB_HOST: database
+    ports:
+      - "8080:8080"
+
+  database:
+    image: "postgres"
+    environment:
+      POSTGRES_USER: guest
+      POSTGRES_PASSWORD: guest
+      POSTGRES_DB: users
+    ports:
+      - "5432:5432"
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+
+volumes:
+  database-data:
